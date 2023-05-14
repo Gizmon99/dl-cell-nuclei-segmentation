@@ -1,0 +1,17 @@
+[tool.kedro]
+package_name = "cell_nuclei_segmentation"
+project_name = "cell-nuclei-segmentation"
+kedro_init_version = "0.18.6"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = """
+--cov-report term-missing \
+--cov src/cell_nuclei_segmentation -ra"""
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
