@@ -1,3 +1,10 @@
 # dl-cell-nuclei-segmentation
 
-Dataset link: https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BSST265
+## Overview
+
+### Team:
+Grzegorz Maliniak, Piotr Słowik
+### Description:
+Cell nuclei pictures segmentation using CNNs
+### Dataset:
+Fluorescence Image Dataset: https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BSST265
