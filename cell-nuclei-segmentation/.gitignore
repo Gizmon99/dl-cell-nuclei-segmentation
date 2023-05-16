@@ -27,6 +27,9 @@ logs/**
 ##########################
 # Common files
 
+# DVC
+!*.dvc
+
 # IntelliJ
 .idea/
 *.iml
