@@ -1,4 +1,0 @@
-[core]
-    remote = /cell-nuclei-segmentation/data/01_raw
-['remote "/cell-nuclei-segmentation/data/01_raw"']
-    url = https://drive.google.com/drive/folders/1V7sBYTSNXzFX5axNOsaYg1gTMlNCEoW5?usp=sharing
