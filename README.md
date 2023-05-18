@@ -5,6 +5,6 @@
 ### Team:
 Grzegorz Maliniak, Piotr Słowik
 ### Description:
-Cell nuclei pictures segmentation using CNNs
+Creating cell nuclei segmentation function using autoencoder
 ### Dataset:
 Fluorescence Image Dataset: https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BSST265
