@@ -5,6 +5,6 @@
 ### Team:
 Grzegorz Maliniak, Piotr Słowik
 ### Description:
-Creating cell nuclei segmentation function using autoencoder
+Cell nuclei segmentation with Mask R-CNN
 ### Dataset:
 Fluorescence Image Dataset: https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BSST265
