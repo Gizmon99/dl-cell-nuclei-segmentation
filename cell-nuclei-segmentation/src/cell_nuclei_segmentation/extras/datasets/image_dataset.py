@@ -6,12 +6,11 @@ class ImageDataset(Dataset):
     """
     Stores images, transmutes them and feeds them to the model.
     """
-    def __init__(self, dataset, image_size):
+    def __init__(self, dataset):
         self.dataset = dataset
         self.idx_to_id = {i : id for i, id in enumerate(self.dataset.keys())}
 
         self.transform = transforms.Compose([
-            transforms.Resize(image_size),
             transforms.ToTensor()
         ])
 
