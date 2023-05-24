@@ -9,7 +9,6 @@ def create_pipeline(**kwargs) -> Pipeline:
 
     return pipeline(
         [
-        node(func = create_torch_dataset, inputs = ["train_pre"], outputs = "train_dataset"),
-        node(func = create_torch_dataset, inputs = ["test_pre"], outputs = "test_dataset")
+        node(func = create_torch_dataset, inputs = ["raw_images", "target_masks"], outputs = "dataset"),
         ]
     )
