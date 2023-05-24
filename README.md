@@ -8,3 +8,4 @@ Grzegorz Maliniak, Piotr Słowik
 Cell nuclei segmentation with Mask R-CNN
 ### Dataset:
 Fluorescence Image Dataset: https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BSST265
+![Screenshot](sample_images_targets.png)
