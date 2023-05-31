@@ -6,9 +6,11 @@ class ImageDataset(Dataset):
     """
     Stores images, transmutes them and feeds them to the model.
     """
-    def __init__(self, dataset):
-        self.dataset = dataset
-        self.idx_to_id = {i : id for i, id in enumerate(self.dataset.keys())}
+    def __init__(self, raw_images, target_masks):
+        self.images = raw_images
+        self.targets = target_masks
+        self.idx_to_id = {i : id for i, id in enumerate(self.images.keys())}
+        self.idx_to_id_target = {i : id for i, id in enumerate(self.targets.keys())}
 
         self.transform = transforms.Compose([
             transforms.ToTensor()
@@ -25,15 +27,23 @@ class ImageDataset(Dataset):
         Returns image placed on position 'idx' in the dataset and image's classification label.
         """
         image_name = self.get_image_name(idx)
-        image = self.dataset[image_name]()
+        image = self.images[image_name]()
+        target = self.targets[image_name]()
 
         if self.transform:
             image = self.transform(image)
+            target = self.transform(target)
 
-        return image
+        return image, target
 
     def get_image_name(self, idx):
         """
         Returns name of image placed on position 'idx' in the dataset.
         """
         return self.idx_to_id[idx]
+    
+    def get_target_name(self, idx):
+        """
+        Returns name of image placed on position 'idx' in the dataset.
+        """
+        return self.idx_to_id_target[idx]
