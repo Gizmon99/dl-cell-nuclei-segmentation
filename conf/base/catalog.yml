@@ -19,3 +19,10 @@ dataset:
   type: pickle.PickleDataSet
   filepath: data/05_model_input/dataset/rawimages
 
+mm_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/basic_model.pkl
+
+trained_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/trained_model.pkl

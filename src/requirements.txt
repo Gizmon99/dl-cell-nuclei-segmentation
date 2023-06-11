@@ -15,6 +15,8 @@ kedro~=0.18.5
 kedro-datasets[pillow.ImageDataSet]>=1.0
 kedro-telemetry~=0.2.0
 kedro-viz>=6.0.1
+mmseg>=1.0
+mmcv>=1.7
 nbstripout~=0.4
 numpy==1.23.4
 pandas>=1.5
