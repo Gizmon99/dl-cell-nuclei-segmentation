@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-"""
-This is a boilerplate pipeline 'model_train'
-generated using Kedro 0.18.6
-"""
-=======
 from torch.utils.data import DataLoader, default_collate
 from torch.optim import Adam
 from mmengine.runner import Runner
@@ -73,4 +67,3 @@ def train_model(model, train_params, train_dataset, test_dataset):
 
     # start training your model
     runner.train()
->>>>>>> Stashed changes
