@@ -2,6 +2,7 @@ model:
   type: EncoderDecoder
   backbone:
     type: ResNet
+    in_channels: 1
     depth: 50
     num_stages: 4
     out_indices: [0, 1, 2, 3]
@@ -14,7 +15,7 @@ model:
     num_classes: 21
   auxiliary_head:
     type: FCNHead
-    in_channels: 1024
+    in_channels: 256
     in_index: 2
     channels: 128
     num_classes: 21

@@ -6,4 +6,4 @@
 
 training_params:
   epochs: 50
-  batch_size: 32
+  batch_size: 1
