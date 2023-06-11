@@ -6,13 +6,13 @@
 raw_images:
   type: PartitionedDataSet
   dataset: kedro.extras.datasets.pillow.ImageDataSet
-  path: data/01_raw/dataset/rawimages
+  path: data/01_raw/test_dataset/rawimages
   filename_suffix: ".tif"
 
 target_masks:
   type: PartitionedDataSet
   dataset: kedro.extras.datasets.pillow.ImageDataSet
-  path: data/01_raw/dataset/groundtruth
+  path: data/01_raw/test_dataset/groundtruth
   filename_suffix: ".tif"
 
 dataset:

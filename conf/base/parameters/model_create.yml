@@ -1,5 +1,35 @@
+<<<<<<< Updated upstream
 # This is a boilerplate parameters config generated for pipeline 'model_create'
 # using Kedro 0.18.6.
 #
 # Documentation for this file format can be found in "Parameters"
 # Link: https://kedro.readthedocs.io/en/0.18.6/kedro_project_setup/configuration.html#parameters
+=======
+model:
+  type: EncoderDecoder
+  backbone:
+    type: ResNet
+    depth: 50
+    num_stages: 4
+    out_indices: [0, 1, 2, 3]
+    frozen_stages: -1
+  decode_head:
+    type: FCNHead
+    in_channels: 2048
+    in_index: -1
+    channels: 256
+    num_classes: 21
+  auxiliary_head:
+    type: FCNHead
+    in_channels: 1024
+    in_index: 2
+    channels: 128
+    num_classes: 21
+
+train_cfg:
+  lr: 0.01
+  momentum: 0.9
+  weight_decay: 0.0001
+  gamma: 0.1
+  step: [8, 11]
+>>>>>>> Stashed changes
