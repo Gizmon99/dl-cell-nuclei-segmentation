@@ -1,5 +1,5 @@
 """
-This is a boilerplate pipeline 'model_create'
+This is a boilerplate pipeline 'model_eval'
 generated using Kedro 0.18.6
 """
 

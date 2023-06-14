@@ -9,6 +9,7 @@ def create_pipeline(**kwargs) -> Pipeline:
 
     return pipeline(
         [
-        node(func = create_torch_dataset, inputs = ["raw_images", "target_masks"], outputs = "dataset"),
+        node(func = annotate_dataset, inputs = ["train_images", "groundtruth_images"], outputs = "train_annotations"),
+        node(func = annotate_dataset, inputs = ["test_images", "groundtruth_images"], outputs = "test_annotations"),
         ]
     )
