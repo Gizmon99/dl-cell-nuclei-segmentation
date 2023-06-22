@@ -3,7 +3,7 @@
 ## Overview
 
 ### Team:
-Grzegorz Maliniak, Piotr Słowik
+Piotr Słowik, Grzegorz Maliniak
 ### Description:
 Cell nuclei segmentation with Mask R-CNN
 ### Dataset:
