@@ -6,7 +6,9 @@ import wandb
 
 
 def train_model(model_config):
-    
+    '''
+    Trains the model created from model_config.
+    '''
     wandb.login()
 
     torch.cuda.set_per_process_memory_fraction(0.95, 0)

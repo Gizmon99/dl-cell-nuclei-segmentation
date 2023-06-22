@@ -7,6 +7,9 @@ from mmengine import Config
 from mmengine.runner import set_random_seed
 
 def setup_config():
+    '''
+    Sets us model configurations, such as where to derive data from and model structure.
+    '''
     cfg = Config.fromfile('./configs/mask_rcnn/mask-rcnn_r50-caffe_fpn_ms-poly-1x_coco.py')
     cfg.metainfo = {
         'classes': ('nuclei', ),

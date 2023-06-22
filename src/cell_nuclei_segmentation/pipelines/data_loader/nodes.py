@@ -6,7 +6,9 @@ import mmengine
 import mmcv
 
 def annotate_dataset(images : PartitionedDataSet, gt_images : PartitionedDataSet):
-    
+    '''
+    Goes over every image in dataset and creates annotations marking where the target cells are based on groundtruth.
+    '''
     annotations = []
     all_images = []
     obj_count = 0
@@ -56,6 +58,9 @@ def annotate_dataset(images : PartitionedDataSet, gt_images : PartitionedDataSet
 
 
 def convert_cells_to_coco(ann_file, out_file, image_prefix):
+    '''
+    Converts cells annotated information into the COCO format.
+    '''
     data_infos = mmengine.load(ann_file)
 
     annotations = []
@@ -105,6 +110,9 @@ def convert_cells_to_coco(ann_file, out_file, image_prefix):
     mmengine.dump(coco_format_json, out_file)
 
 def get_countours(image):
+    '''
+    Gets contours of annotated objects.
+    '''
     image_uint8 = image.astype(np.uint8)
 
     to_extract = np.unique(image)
