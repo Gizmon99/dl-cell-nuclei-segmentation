@@ -62,6 +62,8 @@ kedro run --pipeline='model_eval'
 kedro build-docs
 ```
 
+Extras. Sample results:
+![Screenshot](assets/Ganglioneuroblastoma_4.png)
 
 ### Short version
 
