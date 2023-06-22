@@ -6,11 +6,10 @@ import torch
 import numpy as np
 from mmdet.apis import init_detector, inference_detector
 
-def evaluate(images, gt, config):
+def evaluate(checkpoint_file, images, gt, config):
     '''
     Loads the model from checkpoint and evaluates it's performance based on chosen test set and chosen metrics.
     '''
-    checkpoint_file = './tutorial_exps/epoch_10.pth'
     model = init_detector(config, checkpoint_file, device='cpu')
     dice = []
     precisions = []
@@ -36,4 +35,4 @@ def evaluate(images, gt, config):
     print("iou: ", np.average(iou))
     print("mAP: ", np.sum(precisions)/len(precisions))
     
-    return 0
+    return np.average(dice), np.average(iou), np.sum(precisions)/len(precisions)

@@ -1,9 +1,0 @@
-# This is a boilerplate parameters config generated for pipeline 'data_loader'
-# using Kedro 0.18.6.
-#
-# Documentation for this file format can be found in "Parameters"
-# Link: https://kedro.readthedocs.io/en/0.18.6/kedro_project_setup/configuration.html#parameters
-
-loader_params:
-  image_size: [96, 96]
-  random_seed: 42

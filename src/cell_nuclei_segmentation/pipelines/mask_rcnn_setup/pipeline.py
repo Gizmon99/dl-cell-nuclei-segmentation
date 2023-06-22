@@ -9,5 +9,5 @@ from .nodes import *
 
 def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
-        node(func = setup_config, inputs = None, outputs = 'mask_rcnn_config')
+        node(func = setup_config, inputs = 'params:training_params', outputs = 'mask_rcnn_config')
     ])

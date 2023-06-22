@@ -16,17 +16,13 @@ logs/**
 wandb
 wandb/**
 
-configs
-configs/**
-
 checkpoints
 checkpoints/**
 
 ipynb_checkpoints
 
-tutorial_exps
-tutorial_exps/**
-
+exps
+exps/**
 
 data/**/dataset
 data/**/test_dataset
