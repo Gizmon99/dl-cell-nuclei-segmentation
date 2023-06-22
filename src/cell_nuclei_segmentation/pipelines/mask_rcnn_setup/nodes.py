@@ -1,8 +1,3 @@
-"""
-This is a boilerplate pipeline 'mask_rnn_setup'
-generated using Kedro 0.18.6
-"""
-
 from mmengine import Config
 from mmengine.runner import set_random_seed
 
