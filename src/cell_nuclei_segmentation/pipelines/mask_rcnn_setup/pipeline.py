@@ -1,13 +1,13 @@
 """
-This is a boilerplate pipeline 'model_train'
+This is a boilerplate pipeline 'mask_rnn_setup'
 generated using Kedro 0.18.6
 """
 
 from kedro.pipeline import Pipeline, node, pipeline
 from .nodes import *
-
+        
 
 def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
-        node(func = train_model, inputs = ['mask_rcnn_config'], outputs = 'trained_model')
+        node(func = setup_config, inputs = 'params:training_params', outputs = 'mask_rcnn_config')
     ])

@@ -13,6 +13,16 @@ conf/**/*credentials*
 data/**
 logs/**
 
+wandb
+wandb/**
+
+checkpoints
+checkpoints/**
+
+ipynb_checkpoints
+
+exps
+exps/**
 
 data/**/dataset
 data/**/test_dataset

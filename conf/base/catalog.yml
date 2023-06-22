@@ -3,21 +3,36 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 
-raw_images:
+train_images:
   type: PartitionedDataSet
   dataset: kedro.extras.datasets.pillow.ImageDataSet
-  path: data/01_raw/dataset/rawimages
+  path: data/01_raw/dataset/train
   filename_suffix: ".tif"
 
-target_masks:
+train_annotations:
+  type: json.JSONDataSet
+  filepath: data/01_raw/dataset/train/annotation_coco.json
+
+test_images:
+  type: PartitionedDataSet
+  dataset: kedro.extras.datasets.pillow.ImageDataSet
+  path: data/01_raw/dataset/test
+  filename_suffix: ".tif"
+
+test_annotations:
+  type: json.JSONDataSet
+  filepath: data/01_raw/dataset/test/annotation_coco.json
+
+groundtruth_images:
   type: PartitionedDataSet
   dataset: kedro.extras.datasets.pillow.ImageDataSet
   path: data/01_raw/dataset/groundtruth
   filename_suffix: ".tif"
 
-dataset:
+mask_rcnn_config:
   type: pickle.PickleDataSet
-  filepath: data/05_model_input/dataset/rawimages
+  filepath: data/06_models/model_cfg.pkl
+
 
 mm_model:
   type: pickle.PickleDataSet
