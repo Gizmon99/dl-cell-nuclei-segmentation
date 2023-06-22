@@ -64,6 +64,7 @@ kedro build-docs
 
 Extras. Sample results:
 ![Screenshot](assets/Ganglioneuroblastoma_4.png)
+![Screenshot](assets/Neuroblastoma_12.png)
 
 ### Short version
 
